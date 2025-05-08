@@ -6,7 +6,7 @@ const connectDB = async () => {
       console.warn('Warning: MONGODB_URI environment variable is not set. Using default connection string.');
     }
     
-    const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://sst:shubham@cluster0.mcuiej0.mongodb.net/creator-platform', {
+    const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://sst:<db_password>@cluster0.mcuiej0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
